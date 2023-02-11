@@ -61,6 +61,12 @@ def login():
     return render_template("auth/login.html", form=form)
 
 
+# ランキング用のルート
+@auth.route("/rank", methods=["GET", "POST"])
+def rank():
+    users = User.query.order_by("high_score")
+    return render_template("auth/rank.html", users = users)
+
 # ログアウト用
 @auth.route("/logout")
 def logout():

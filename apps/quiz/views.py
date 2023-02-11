@@ -10,7 +10,7 @@ from apps.config import QUIZ
 from apps.quiz.forms import QuizForm
 
 # APIの設定
-openai.api_key = "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"
+openai.api_key = "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"
 model_engine = "text-davinci-003"
 
 quiz = Blueprint(
