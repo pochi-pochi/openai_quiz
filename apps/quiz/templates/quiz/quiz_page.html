@@ -1,85 +1,16 @@
 {% extends "quiz/base.html" %}
 {% block title %}クイズ一覧画面{% endblock %}
 {% block content %}
-<section class="radios-boxes">
-<h1 style="margin-top:50px;">QUIZ</h1>
+<h2>問題</h2>
 <form method="post">
     {{ form.hidden_tag() }}
-    <h2>{{ quiz_prompt }}</h2>
-    <div class="radios-boxes">
+    {{ quiz_prompt }}
+    <ul>
         {% for label, value in form.choice.choices %}
-        <label>
-            <input type="radio" name="choice" class="radio" value="{{ value }}">
-            <div class="labels">
-                <label for="radio1" class="label">{{ label }}</label>
-            </div>
-        </label>
+        <li><input type="radio" name="choice" value="{{ value }}">{{ label }}</li>
         {% endfor %}
-    <div>
-        <input type="submit" value="回答する">
-    </div>
-</div>
+    </ul>
+    <input type="submit" value="回答する">
 </form>
-</section>
 
-<style>
-.radios-boxes {
-    display: flex;
-    flex-direction: column;
-}
-
-h2 {
-    margin-bottom: 20px;
-    font-weight: 800;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.radios-boxes label {
-    display: flex;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.radio {
-    margin-right: 10px;
-    border-radius: 50%;
-    border: 16px solid #ccc;
-    cursor: pointer;
-    height: 30px;
-    margin: 10px;
-    outline: 0;
-    -webkit-tap-highlight-color: transparent;
-    width: 60px;
-}
-
-.labels {
-    display: flex;
-    align-items: center;
-    margin-top: 18px;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    font-size: 20px;
-    padding: 15px 0;
-    -webkit-tap-highlight-color: transparent;
-    transition: color 800ms;
-}
-
-input[type="submit"] {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #6e6e6e;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-</style>
 {% endblock %}
