@@ -3,5 +3,13 @@
 
 {% block content %}
 <h2>結果発表</h2>
-<p>{{ correct }}</p>
+<p>最高記録：{{ correct }}</p>
+<p>今回の記録：{{ correct_sum }}</p>
+{% for yes_or_no in correct_or_not %}
+{% if yes_or_no=="1" %}
+<p>正解</p>
+{% elif yes_or_no=="0" %}
+<p>不正解</p>
+{% endif %}
+{% endfor %}
 {% endblock %}
