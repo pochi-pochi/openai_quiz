@@ -1,21 +1,38 @@
 
-{% extends "quiz/index.htm" %}
-
+{% extends "quiz/base2.html" %}
 {% block title %}ユーザ新規登録{% endblock %}
-
 {% block content %}
-        <h1>ユーザー新規登録</h1>
-        <section>
+<h1 class="l-login__title">AI QUIZ </h1>
+
+        <section class="l-loginarea">
+        <p class="l-login__title_sentence">ユーザー登録</p>
             <form method="post" action="{{ url_for('auth.signup', next=request.args.get('next')) }}"
                 class="form-signin">
                 {{ form.csrf_token }}
                 {% for message in get_flashed_messages() %}
                 <div class="dt-auth-flash">{{ message }}</div>
                 {% endfor %}
-                {{ form.username(class="l-user__name", placeholder="ユーザー名") }}
-                {{ form.password(class="l-user__name",placeholder="パスワード") }}
-                {{ form.submit(class="u-button__ranking") }}
+                {{ form.username(class="l-login__text", placeholder="ユーザー名") }}<br/>
+                {{ form.password(class="l-login__text",placeholder="パスワード") }}<br/>
+                {{ form.submit(class="u-loginbutton__submit") }}
             </form>
         </section>
+
+
+
+        <footer class="l-footer">
+Copyright © 2023 Taguchi kakuto
+                 Yagi takahiro
+                 Nakazima masato
+                 Asahi kei
+                 Takasu ayami 
+</footer>
+
+
+
+
+
+
+
 {% endblock %}
 

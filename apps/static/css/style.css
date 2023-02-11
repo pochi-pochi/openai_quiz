@@ -156,15 +156,23 @@ input[type="search"] {
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+  margin-bottom: 10px;
   font-family: "Cabin Sketch", cursive;
   font-size: 70px;
-  /* border-bottom: solid; */
+  border-bottom: solid;
   width: 100%;
 }
-
+.l-login__title_sentence {
+  /* display: block; */
+  margin-top: 40px;
+  margin-bottom: 0px;
+  font-size: 30px;
+  border-bottom: solid;
+}
 .l-loginarea {
-  margin-top: 20px;
-  height: 500px;
+  margin-top: 50px;
+  padding: 1px;
+  height: 550px;
   text-align: center;
   width: 70%;
   margin-left: auto;
@@ -173,10 +181,40 @@ input[type="search"] {
 }
 
 .l-login__text {
-  font-size: 20px;
-  width: 80%;
-  margin-top: 20px;
+  font-size: 25px;
+  width: 60%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.u-loginbutton__submit {
+  background: #abaaa9;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  margin-top: 5px;
   margin-bottom: 20px;
+  font-size: 20px;
+  height: 50px;
+  width: 200px;
+  /* アニメーション */
+  transition: all 0.3s;
+}
+.u-loginbutton__submit:hover {
+  background: rgb(87, 82, 76);
+  color: white;
+  /* font-size: 22px; */
+  height: 56px;
+  width: 220px;
+}
+/* ログインフッター */
+.l-footer__login {
+  margin-top: 200px;
+  text-align: center;
+}
+
+.l-loginarea__a {
+  margin-top: 20px;
 }
 
 /* ログイン画面ここまで */
