@@ -101,8 +101,9 @@ input[type="search"] {
 .l-title {
   margin-left: auto;
   margin-right: auto;
-  margin-top: 50px;
+  margin-top: 110px;
   font-family: "Cabin Sketch", cursive;
+  font-size: 70px;
 }
 
 /* ボタンエリア */
@@ -111,17 +112,72 @@ input[type="search"] {
   cursor: pointer;
   border-radius: 6px;
   border: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  height: 50px;
+  width: 200px;
+  /* アニメーション */
+  transition: all 0.3s;
 }
+.u-button__challenge:hover {
+  background: rgb(87, 82, 76);
+  color: white;
+  height: 56px;
+  width: 220px;
+}
+
 .u-button__ranking {
   /* background: green; */
   background: #abaaa9;
   cursor: pointer;
   border-radius: 6px;
   border: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  height: 50px;
+  width: 200px;
+  /* アニメーション */
+  transition: all 0.3s;
+}
+.u-button__ranking:hover {
+  background: rgb(87, 82, 76);
+  color: white;
+  /* font-size: 22px; */
+  height: 56px;
+  width: 220px;
 }
 /* ここまで */
 
 /* ログイン画面 */
+
+.l-login__title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  font-family: "Cabin Sketch", cursive;
+  font-size: 70px;
+  /* border-bottom: solid; */
+  width: 100%;
+}
+
+.l-loginarea {
+  margin-top: 20px;
+  height: 500px;
+  text-align: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+}
+
+.l-login__text {
+  font-size: 20px;
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 
 /* ログイン画面ここまで */
 
@@ -133,3 +189,16 @@ input[type="search"] {
 }
 
 /* ユーザー登録画面ここまで */
+
+.l-space {
+  margin-top: 10px;
+  margin-bottom: 80px;
+  font-size: 20px;
+  border-bottom: solid;
+  /* display: none; */
+}
+
+.l-footer {
+  margin-top: 300px;
+  text-align: center;
+}

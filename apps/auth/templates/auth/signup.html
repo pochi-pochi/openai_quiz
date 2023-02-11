@@ -1,11 +1,9 @@
-{% extends "quiz/base.html" %}
+
+{% extends "quiz/index.htm" %}
 
 {% block title %}ユーザ新規登録{% endblock %}
 
 {% block content %}
-<div class="mx-auto dt-auth-main">
-    <div class="card dt-auth-signup">
-        <!-- <header>ユーザ新規登録</header> -->
         <h1>ユーザー新規登録</h1>
         <section>
             <form method="post" action="{{ url_for('auth.signup', next=request.args.get('next')) }}"
@@ -14,12 +12,10 @@
                 {% for message in get_flashed_messages() %}
                 <div class="dt-auth-flash">{{ message }}</div>
                 {% endfor %}
-
-                {{ form.username(size=30, class="l-user__name", placeholder="ユーザー名") }}
+                {{ form.username(class="l-user__name", placeholder="ユーザー名") }}
                 {{ form.password(class="l-user__name",placeholder="パスワード") }}
-                {{ form.submit(class="btn btn-md btn-primary btn-block dt-auth-btn") }}
+                {{ form.submit(class="u-button__ranking") }}
             </form>
         </section>
-    </div>
-</div>
 {% endblock %}
+

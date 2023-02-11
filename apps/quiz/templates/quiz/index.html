@@ -15,10 +15,13 @@
 <!-- ここが恐らくトップ画面になりそう -->
 <div class="text-center">
 <h1 class="l-title">AI QUIZ</h1>
-<p>AIの作り出したクイズに挑戦しよう。</p>
+<p class="l-space">AIの作り出したクイズに挑戦しよう。</p>
     {% if current_user.is_authenticated %}
     <!-- ログインしている状態でしたら下のような文章が出てきて -->
     <!-- <li class="nav-item"> -->
+        <div class="l-spac">
+            <!-- <h1>陸上（displaynoneで消える）</h1> -->
+        </div>
      <a class="nav-link" href="{{ url_for('quiz.quiz_page') }}">
      <button class="u-button__challenge">  
      クイズに挑戦する
@@ -29,6 +32,13 @@
      ランキングを見る
      </button>  
     </a>
+
+    <a class="nav-link" href="">
+     <button class="u-button__ranking"> 
+     ユーザー管理
+     </button>  
+    </a>
+
     <a class="nav-link" href="{{ url_for('auth.logout') }}">
         <button class="u-button__ranking">
             ログアウト
@@ -38,7 +48,7 @@
     {% else %}
     
 <!-- ログインしていなかったら下のような文章が出てくる -->
- <p> ログイン、新規登録をしてください。</p> 
+ <!-- <p> ログイン、新規登録をしてください。</p>  -->
 <a class="nav-link" href="{{ url_for('auth.login') }}">
 <button class="u-button__ranking"> ログイン</button>  
 </a>
@@ -48,11 +58,12 @@
 ユーザ登録
 </button> 
 </a>
-            
-
-
-
-
-    
     {% endif %}
 </div>
+<footer class="l-footer">
+Copyright © 2023 Taguchi kakuto
+                 Yagi takahiro
+                 Nakazima masato
+                 Asahi kei
+                 Takasu ayami 
+</footer>

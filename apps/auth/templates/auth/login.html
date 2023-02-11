@@ -1,7 +1,9 @@
 
-<!-- {% extends "quiz/base.html" %} -->
-<!-- {% block title %}ログイン{% endblock %} -->
-<!-- {% block content %} -->
+<!--  
+{% extends "quiz/base.html" %}
+{% block title %}ログイン{% endblock %}
+-->
+{% block content %}
 
 <!DOCTYPE html>
 <html lang="ja">
@@ -10,28 +12,40 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ログイン</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}"> -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
         <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     </head>
 
-    <body>
-<div class="mx-auto dt-auth-main">
-    <div class="card dt-auth-login">
-        <header>ログイン</header>
-        <section>
+<body>
+<!-- <div class="mx-auto dt-a"> -->
+    <!-- <div class="card dt-auth-login"> -->
+        <!-- <header>ログイン</header> -->
+        <h1 class="l-login__title">AI QUIZ </h1>
+
+        <section class="l-loginarea">
+            <p>ログイン</p>
             <form method="post" action="{{ url_for('auth.login') }}">
                 {% for message in get_flashed_messages() %}
                 <span class="dt-auth-flash">{{ message }}</span>
                 {% endfor %}
                 {{ form.csrf_token }}
-                {{ form.username(class="form-control dt-auth-input",placeholder="ユーザ名") }}
-                {{ form.password(class="form-control dt-auth-input",placeholder="パスワード") }}
-                {{ form.submit(class="btn btn-md btn-primary btn-block dt-auth-btn") }}
+                {{ form.username(class="",placeholder="ユーザ名") }}<br/>
+                {{ form.password(class="",placeholder="パスワード") }}<br/>
+                {{ form.submit(class="u-button__ranking") }}
             </form>
-        </section>
-    </div>
-</div>
+            <a href="{{ url_for('auth.signup') }}">ログインされていない方はこちらからユーザー登録へ。</a>
 
+        </section>
+    <!-- </div> -->
+<!-- </div> -->
+<footer class="l-footer">
+Copyright © 2023 Taguchi kakuto
+                 Yagi takahiro
+                 Nakazima masato
+                 Asahi kei
+                 Takasu ayami 
+</footer>
 </body>
+
 <!-- {% endblock %} -->
