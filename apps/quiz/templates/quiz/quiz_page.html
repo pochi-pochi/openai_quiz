@@ -1,0 +1,16 @@
+{% extends "quiz/base.html" %}
+{% block title %}クイズ一覧画面{% endblock %}
+{% block content %}
+<h2>問題</h2>
+<form method="post">
+    {{ form.hidden_tag() }}
+    {{ quiz_prompt }}
+    <ul>
+        {% for label, value in form.choice.choices %}
+        <li><input type="radio" name="choice" value="{{ value }}">{{ label }}</li>
+        {% endfor %}
+    </ul>
+    <input type="submit" value="回答する">
+</form>
+
+{% endblock %}

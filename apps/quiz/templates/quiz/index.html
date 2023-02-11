@@ -1,0 +1,15 @@
+{% extends "quiz/base.html" %}
+{% block title %}拾得物管理アプリトップ{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    {% if current_user.is_authenticated %}
+    <p>AIの作り出した問題に答えるクイズアプリです。</p>
+
+    {% else %}
+    <p>
+        ログイン、もしくは新規登録を行ってください。
+    </p>
+    {% endif %}
+</div>
+{% endblock %}
