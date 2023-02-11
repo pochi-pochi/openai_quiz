@@ -31,14 +31,17 @@ def index():
 @login_required
 def quiz_page():
     form = QuizForm()
-    correct_count = request.cookies.get("correct_count", 0)
-    correct_count = int(correct_count)
     quiz_num = request.cookies.get("quiz_num", 0)
     quiz_num = int(quiz_num)
+    
+    if quiz_num == 0:
+        correct_count = 0
+    else :
+        correct_count = correct_count
 
     if quiz_num == 10:
         flash("結果発表！")
-        return redirect(url_for("quiz.quiz_result", correct_count=correct_count))
+        return redirect(url_for("quiz.quiz_result", correct_count = correct_count))
 
     options = random.sample(QUIZ, 4)
     answer = random.choice(options)
@@ -65,7 +68,6 @@ def quiz_page():
             quiz_num += 1
             flash("不正解…")
         response = redirect(url_for("quiz.quiz_page"))
-        response.set_cookie("correct_count", str(correct_count))
         response.set_cookie("quiz_num", str(quiz_num))
         return response
 
@@ -76,19 +78,15 @@ def quiz_page():
 @quiz.route("/quiz/result/<correct_count>")
 @login_required
 def quiz_result(correct_count):
-    if int(current_user.high_score) < int(correct_count):
-        current_user.high_score = int(correct_count)
+    if int(current_user.high_score) < correct_count:
+        current_user.high_score = correct_count
         db.session.add(current_user)
         db.session.commit()
 
-    correct_count = request.cookies.get("correct_count", 0)
-    correct_count = int(correct_count)
     quiz_num = request.cookies.get("quiz_num", 0)
     quiz_num = int(quiz_num)
-    correct_count = 0
     quiz_num = 0
     response = redirect(url_for("quiz.quiz_result_dis"))
-    response.set_cookie("correct_count", str(correct_count))
     response.set_cookie("quiz_num", str(quiz_num))
     return response
 
