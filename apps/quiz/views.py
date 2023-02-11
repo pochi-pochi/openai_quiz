@@ -8,9 +8,10 @@ from flask_login import current_user, login_required
 from apps.app import db
 from apps.config import QUIZ
 from apps.quiz.forms import QuizForm
+import os
 
 # APIの設定
-openai.api_key = "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"
+openai.api_key = os.getenv("OPENAI_API_KEY")
 model_engine = "text-davinci-003"
 
 quiz = Blueprint(
