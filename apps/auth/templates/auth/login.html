@@ -1,8 +1,21 @@
-{% extends "quiz/base.html" %}
 
-{% block title %}ログイン{% endblock %}
+<!-- {% extends "quiz/base.html" %} -->
+<!-- {% block title %}ログイン{% endblock %} -->
+<!-- {% block content %} -->
 
-{% block content %}
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ログイン</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    </head>
+
+    <body>
 <div class="mx-auto dt-auth-main">
     <div class="card dt-auth-login">
         <header>ログイン</header>
@@ -19,4 +32,6 @@
         </section>
     </div>
 </div>
-{% endblock %}
+
+</body>
+<!-- {% endblock %} -->
