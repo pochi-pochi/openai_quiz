@@ -1,3 +1,4 @@
+/*
 body {
     background-color: #f5f5f5;
 }
@@ -93,4 +94,247 @@ input[type="search"] {
 
 .dt-image-submit {
     margin-left: 10px;
+}
+*/
+body {
+  background-color: #f5f5f5;
+}
+
+h4 {
+  margin-top: 20px;
+}
+
+input[type="search"] {
+  background-color: #f5f5f5;
+}
+
+.dt-auth-main {
+  width: 400px;
+  margin-top: 45px;
+}
+
+.dt-auth-main .card {
+  box-shadow: 0 12px 18px 2px rgba(34, 0, 51, 0.04),
+    0 6px 22px 4px rgba(7, 48, 114, 0.12),
+    0 6px 10px -4px rgba(14, 13, 26, 0.12) !important;
+  border-radius: 16px;
+}
+
+.dt-auth-main .dt-auth-login {
+  height: 300px !important;
+}
+
+.dt-auth-main .dt-auth-signup {
+  height: 340px !important;
+}
+
+.dt-auth-main header {
+  text-align: center;
+  margin: 30px 0 0 0;
+  font-size: 24px;
+}
+
+.dt-auth-main section {
+  width: 300px;
+  margin: 10px auto;
+}
+
+.dt-auth-flash {
+  font-size: 14px;
+  color: #9c1a1c;
+}
+
+.dt-auth-input {
+  margin-top: 10px;
+}
+
+.dt-auth-btn {
+  margin: 30px 0 0 0;
+}
+
+.dt-search {
+  height: 28px !important;
+}
+
+.dt-image-content {
+  margin: 20px auto;
+  padding: 0;
+}
+
+.dt-image-username {
+  padding-top: 15px;
+}
+
+.dt-image-register-btn {
+  padding: 10px 47px 0 0;
+}
+
+.dt-image-content header {
+  padding: 10px 10px 0 10px;
+}
+
+.dt-image-content section {
+  padding: 10px 0;
+  margin: auto;
+}
+
+.dt-image-content footer {
+  padding: 10px;
+}
+
+.dt-image-content section img {
+  width: 100%;
+}
+
+.dt-image-file {
+  display: none;
+}
+
+.dt-image-submit {
+  margin-left: 10px;
+}
+/* ここがどういった処理をなされているかは知らないがここから先を追加するという形を取らせていただく */
+
+/* クイズに挑戦する画面 ログインされていない時の画面 */
+.l-title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 110px;
+  font-family: "Cabin Sketch", cursive;
+  font-size: 70px;
+}
+
+/* ボタンエリア */
+.u-button__challenge {
+  background: #abaaa9;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  height: 50px;
+  width: 200px;
+  /* アニメーション */
+  transition: all 0.3s;
+}
+.u-button__challenge:hover {
+  background: rgb(87, 82, 76);
+  color: white;
+  height: 56px;
+  width: 220px;
+}
+
+.u-button__ranking {
+  /* background: green; */
+  background: #abaaa9;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  height: 50px;
+  width: 200px;
+  /* アニメーション */
+  transition: all 0.3s;
+}
+.u-button__ranking:hover {
+  background: rgb(87, 82, 76);
+  color: white;
+  /* font-size: 22px; */
+  height: 56px;
+  width: 220px;
+}
+/* ここまで */
+
+/* ログイン画面 */
+
+.l-login__title {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-family: "Cabin Sketch", cursive;
+  font-size: 70px;
+  border-bottom: solid;
+  width: 100%;
+}
+.l-login__title_sentence {
+  /* display: block; */
+  margin-top: 40px;
+  margin-bottom: 0px;
+  font-size: 30px;
+  border-bottom: solid;
+}
+.l-loginarea {
+  margin-top: 50px;
+  padding: 1px;
+  height: 550px;
+  text-align: center;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  background: white;
+}
+
+.l-login__text {
+  font-size: 25px;
+  width: 60%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.u-loginbutton__submit {
+  background: #abaaa9;
+  cursor: pointer;
+  border-radius: 6px;
+  border: none;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  height: 50px;
+  width: 200px;
+  /* アニメーション */
+  transition: all 0.3s;
+}
+.u-loginbutton__submit:hover {
+  background: rgb(87, 82, 76);
+  color: white;
+  /* font-size: 22px; */
+  height: 56px;
+  width: 220px;
+}
+/* ログインフッター */
+.l-footer__login {
+  margin-top: 200px;
+  text-align: center;
+}
+
+.l-loginarea__a {
+  margin-top: 20px;
+}
+
+/* ログイン画面ここまで */
+
+/* ユーザー登録画面 */
+
+.l-user__name {
+  background: white;
+  color: red;
+}
+
+/* ユーザー登録画面ここまで */
+
+.l-space {
+  margin-top: 10px;
+  margin-bottom: 80px;
+  font-size: 20px;
+  border-bottom: solid;
+  /* display: none; */
+}
+
+.l-footer {
+  margin-top: 300px;
+  text-align: center;
 }
