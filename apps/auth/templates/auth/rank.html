@@ -1,0 +1,27 @@
+{% extends "quiz/base.html" %}
+
+{% block title %}ランキング表{% endblock %}
+    
+{% block content %}
+
+<div class="card col-md-18 dt-image-content">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>名前</th>
+                <th>ハイスコア</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.username }}</td>
+                <td>{{ user.high_score }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
