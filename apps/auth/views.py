@@ -1,5 +1,6 @@
 from flask import Blueprint, flash, redirect, render_template, request, url_for
 from flask_login import login_user, logout_user
+from sqlalchemy import desc
 
 from apps.app import db
 from apps.auth.forms import LoginForm, SignUpForm
@@ -64,8 +65,9 @@ def login():
 # ランキング用のルート
 @auth.route("/rank", methods=["GET", "POST"])
 def rank():
-    users = User.query.order_by("high_score")
-    return render_template("auth/rank.html", users = users)
+    users = User.query.order_by(desc("high_score"))
+    return render_template("auth/rank.html", users=users)
+
 
 # ログアウト用
 @auth.route("/logout")
